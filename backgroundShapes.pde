@@ -1,48 +1,41 @@
-// BackGround Objects v2
-// by Gabriel Walford
-// 2013
-///////////////////////////////////////////////////////////////////////////
-
-
 BGshape[] shapes = new BGshape[3];
 int shapeCount = 3;
 
 
 // Start Setup
 void setup(){
-  
-  size (2000,2000, OPENGL);
-  
-	smooth();
 
-	for (int i=0; i<shapes.length; i++) {
-	  shapes[i] = new BGshape();
-	}
+  size (2000,2000, OPENGL);
+
+  smooth();
+
+  for (int i=0; i<shapes.length; i++) {
+    shapes[i] = new BGshape();
+  }
 
 } // End Setup
 
 
 // Start Draw Loop
 void draw(){
-   background(250);
-   
-     ambientLight(150, 150, 150);
-//     pointLight(255, 255, 255, width/2, height/2, 0);
+  background(250);
 
-	for (int i = 0; i<shapeCount;i++) {
-	    shapes[i].moving();
-	  }
-  
+  ambientLight(150, 150, 150);
+  // pointLight(255, 255, 255, width/2, height/2, 0);
+
+  for (int i = 0; i<shapeCount;i++) {
+    shapes[i].moving();
+  }
+
 }//END Draw
 
 
 //Start BGshape Class
 class BGshape {
-  
-    float x, y, z;
-    float a, b, c, d, e, f, g, h, i, j, k, l;
-    float velX,velY,velZ,velX1,velY1,velZ1,velX2,velY2,velZ2,velX3,velY3,velZ3,velX4,velY4,velZ4;
 
+  float x, y, z;
+  float a, b, c, d, e, f, g, h, i, j, k, l;
+  float velX,velY,velZ,velX1,velY1,velZ1,velX2,velY2,velZ2,velX3,velY3,velZ3,velX4,velY4,velZ4;
 
   // Start BGshape Setup
   BGshape(){
@@ -81,29 +74,28 @@ class BGshape {
 
   } //END BGshape
 
-
   // Start BGshape Moving
   void moving(){
     noStroke();
     fill (x,y,z, 150);
 
     beginShape();
-      normal(0,0,50);
-      vertex(a,b,c);
-      vertex(d,e,f);
-      vertex(g,h,i);
-      vertex(j,k,l);
-      vertex(a,b,c);
+    normal(0,0,50);
+    vertex(a,b,c);
+    vertex(d,e,f);
+    vertex(g,h,i);
+    vertex(j,k,l);
+    vertex(a,b,c);
     endShape();
 
     fill (x,y,z, 100);
 
     beginShape();
-      vertex(a,b,c+500);
-      vertex(d,e,f+500);
-      vertex(g,h,i+500);
-      vertex(j,k,k+500);
-      vertex(a,b,l+500);
+    vertex(a,b,c+500);
+    vertex(d,e,f+500);
+    vertex(g,h,i+500);
+    vertex(j,k,k+500);
+    vertex(a,b,l+500);
     endShape();
 
     a+=velX;
@@ -120,42 +112,42 @@ class BGshape {
     l+=velZ3;
 
     if( a > width || a < 0){
-      velX *=-1; 
+    velX *=-1; 
     }
     if( b > height || b < 0){
-      velY *=-1;
+    velY *=-1;
     }
     if( c > -10 ||c < -100 ){
-      velZ *=-1;
+    velZ *=-1;
     }
     if( d > width || d < 0){
-      velX1 *=-1; 
+    velX1 *=-1; 
     }
     if( e > height || e < 0){
-      velY1 *=-1;
+    velY1 *=-1;
     }
     if( f > -10 || f < -100){
-      velZ1 *=-1;
+    velZ1 *=-1;
     }
-      if( g > width || g < 0){
-      velX2 *=-1; 
+    if( g > width || g < 0){
+    velX2 *=-1; 
     }
     if( h > height || h < 0){
-      velY2 *=-1;
+    velY2 *=-1;
     }
     if( i > 0 || i < -100){
-      velZ2 *=-1;
+    velZ2 *=-1;
     }
     if( j > width || j < 0){
-      velX3 *=-1; 
+    velX3 *=-1; 
     }
     if( k > height || k < 0){
-      velY3 *=-1;
+    velY3 *=-1;
     }  
     if( l > 0 || l < -100){
-      velZ3 *=-1;
+    velZ3 *=-1;
     }
 
-	}//END Moving
+  }//END Moving
 
 } //END CLASS
