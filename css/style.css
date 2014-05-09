@@ -70,6 +70,21 @@ canvas {
   z-index: -500;
 }
 
+#fork-me {
+  background: url('/images/forkme.png') no-repeat;
+  border: 0;
+  display: block;
+  height: 149px;
+  position: fixed;
+  right: 0;
+  text-indent: -9999px;
+  top: 0;
+  width: 149px;
+}
+
+#fork-me:hover {
+  background: url('/images/forkme-hover.png') no-repeat;
+
 /* Media queries!
 -------------------------------------------------------------------------------*/
 
