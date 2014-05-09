@@ -59,6 +59,17 @@ footer {
   width: 80%;
 }
 
+canvas { 
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  min-width: 300px;
+  height: 100%;
+  min-height: 300px;
+  z-index: -500;
+}
+
 /* Media queries!
 -------------------------------------------------------------------------------*/
 

@@ -17,21 +17,27 @@
 		<link rel="stylesheet" href="css/style.css" />
 		
 		<script src="js/lib/modernizr.custom.js"></script>
+    <script src="js/lib/processing-1.4.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      function getProcessingSketchId () { return 'backgroundObjectsJS'; }
+    </script>    
 	</head>
 
 	<body>
 
-			<header>
-				<h1>Canvas Background Shapes</h1>
-			</header>
-			
-			<article>
-				<p>Using Processing.js to create a particle system of generative background shapes which move across the background of a website using canvas.</p>
-			</article>
-				
-			<footer>
-        <p>Created By <a href="http://gabrielwalford.com" alt="Gabriel Walford">Gabriel Walford</a></p>
-			</footer>
+    <header>
+      <h1>Canvas Background Shapes</h1>
+    </header>
+    
+    <article>
+      <p>Using Processing.js to create a particle system of generative background shapes which move across the background of a website using canvas.</p>
+    </article>
+      
+    <footer>
+      <p>Created By <a href="http://gabrielwalford.com" alt="Gabriel Walford">Gabriel Walford</a></p>
+    </footer>
+
+    <canvas id="backgroundObjectsJS" data-processing-sources="js/app/backgroundObjectsJS.pjs"></canvas>   
 
 		<script src='js/lib/jquery-2.1.1.min.js'></script>
 		<script src="js/app/functions.js"></script>
